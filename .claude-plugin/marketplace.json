@@ -1,0 +1,15 @@
+{
+  "name": "birim",
+  "description": "Birim plugins for Claude: work with your WordPress site's private files.",
+  "owner": {
+    "name": "Birim",
+    "url": "https://birimone.pages.dev/"
+  },
+  "plugins": [
+    {
+      "name": "birim-private-files",
+      "source": "./",
+      "description": "Share protected WordPress files from Claude with expiring, email-code links. Needs Birim Private Files Pro."
+    }
+  ]
+}

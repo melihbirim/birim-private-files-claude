@@ -1,0 +1,32 @@
+{
+  "name": "birim-private-files",
+  "displayName": "Birim Private Files",
+  "version": "1.0.0",
+  "description": "Share protected WordPress files from Claude: find a file, create an expiring link that needs an email code, email it, list and turn off links, and read the download log. Needs the Birim Private Files Pro WordPress plugin.",
+  "author": {
+    "name": "Birim",
+    "url": "https://birimone.pages.dev/"
+  },
+  "homepage": "https://birimone.pages.dev/private-files/",
+  "repository": "https://github.com/melihbirim/birim-one-wp-plugins",
+  "license": "GPL-2.0-or-later",
+  "keywords": ["wordpress", "file sharing", "private files", "share link", "mcp"],
+  "icon": "./icon.png",
+  "documentationUrl": "https://birimone.pages.dev/private-files/",
+  "supportUrl": "https://birimone.pages.dev/private-files/",
+  "privacyPolicyUrl": "https://birimone.pages.dev/privacy/",
+  "userConfig": {
+    "mcp_url": {
+      "type": "string",
+      "title": "Your site's MCP address",
+      "description": "The connector address your WordPress OAuth plugin shows, for example https://example.com/wp-json/mcp/mcp-oauth-server. You approve the connection on your site the first time Claude uses it.",
+      "required": true
+    }
+  },
+  "mcpServers": {
+    "wordpress": {
+      "type": "http",
+      "url": "${user_config.mcp_url}"
+    }
+  }
+}
